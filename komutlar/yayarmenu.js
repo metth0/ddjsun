@@ -12,7 +12,6 @@ let yardım = new Discord.RichEmbed()
 **:white_small_square: = \`+otorol ayarla\` : Gelen Herkese ROL Verir**
 **:white_small_square: = \`+ban\` : İstediğiniz Kişiyi Banlarsınız**
 **:white_small_square: = \`+kick\` : İstediğiniz Kişiyi Kicklersiniz**
-**:white_small_square: = \`+ototag\` : Oto Tag Ayarlar**
 **:white_small_square: = \`+küfür-engel\` : Sunucunuzda Küfür Engel Açarr**
 **:white_small_square: = \`+sil 1-100\` : Belirtilen Kadar Mesaj Siler **`)
 .setFooter(`${message.author.tag} Tarafından İstendi.`, message.author.avatarURL)
