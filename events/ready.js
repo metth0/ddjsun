@@ -10,9 +10,9 @@ module.exports = client => {
 client.user.setPresence({
         game: {
             name: `Diablo Bot`,
-            type: 'WATCHING'   //WATCHING - İZLİYOR LISTINING - DİNLİYOR
+            type: 'LISTENING'   //WATCHING - İZLİYOR LISTINING - DİNLİYOR
         },
-        status: 'online'   //online - Çevrimiçi idle - Boşta
+        status: 'idle'   //online - Çevrimiçi idle - Boşta
 });
 
 }
