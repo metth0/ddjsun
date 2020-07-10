@@ -21,7 +21,7 @@ const ytdl = require('ytdl-core');
 
 const app = express();
 app.get("/", (request, response) => {
-  console.log(Date.now() + "Lord Creative | Youtube Channel");
+  console.log(Date.now() + "");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);

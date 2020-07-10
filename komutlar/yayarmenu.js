@@ -3,8 +3,8 @@ exports.run = async (client, message, args) => {
 let prefix = '-'
 let yardım = new Discord.RichEmbed()  
 .setAuthor(`${client.user.username}`, client.user.avatarURL)
-.setColor('GREEN')
-.addField('Fynx Store   BOT Moderasyon Menüsü',`
+.setColor('PURPLE')
+.addField('Diablo Bot Moderasyon Menüsü',`
 **:white_small_square: = \`-sayaç\` : Sunucunuza Sayaç Kurar**
 **:white_small_square: = \`-yavaşmod\` : Sohbet Kanalına Sayaç Ekler**
 **:white_small_square: = \`-modlog\` : Sunucunuzun Denetim Kaydını Tutar**

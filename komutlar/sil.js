@@ -2,14 +2,14 @@ const Discord = require('discord.js');
 exports.run = function(client, message, args) {
   if (!message.guild) {
   const ozelmesajuyari = new Discord.RichEmbed()
-  .setColor(0x1e90ff)
+  .setColor(660099)
   .setTimestamp()
   .setAuthor(message.author.username, message.author.avatarURL)
   .addField(':warning: Uyarı :warning:', '`temizle` adlı komutu özel mesajlarda kullanamazsın.')
   return message.author.sendEmbed(ozelmesajuyari); }
   if (!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) {
 	const botunmesajyonet = new Discord.RichEmbed()
-    .setColor(0x1e90ff)
+    .setColor(660099)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
     .addField(':warning: Uyarı :warning:', 'Mesajları silebilmem için `Mesajları Yönet` yetkisine sahip olmalıyım.')
@@ -20,7 +20,7 @@ exports.run = function(client, message, args) {
     limit: messagecount
   }).then(messages => message.channel.bulkDelete(messages));
     const sohbetsilindi = new Discord.RichEmbed()
-    .setColor(0x1e90ff)
+    .setColor(660099)
     .setTimestamp()
     .addField('Eylem:', 'Sohbet silme')
     .addField('Yetkili:', message.author.username)
