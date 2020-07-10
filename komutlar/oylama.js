@@ -23,7 +23,7 @@
        .setTimestamp()
        .setFooter('Diablo Bot', client.user.avatarURL)
 
-       .addField(`**Fynx Store   Bot  | Oylama**`, `**${question}**`)).then(function(message) {
+       .addField(`**Diablo Bot | Oylama**`, `**${question}**`)).then(function(message) {
 
          message.react('👍🏻');
 
