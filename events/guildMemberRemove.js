@@ -1,3 +1,2 @@
-const Discord = require('discord.js');
-module.exports = member => {
-};
+const Discord = require("discord.js");
+module.exports = member => {};
