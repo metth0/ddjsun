@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
  
   let hata3 = new Discord.RichEmbed()
  .setTitle('Diablo  BOT')
- .setDescription(message.member.user.username + '\n **-ban <kullanıcı>** şeklinde olmalı!')
+ .setDescription(message.member.user.username + '\n **+ban <kullanıcı>** şeklinde olmalı!')
  .setColor('PURPLE')
 
 
@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
 
 let hata2 = new Discord.RichEmbed()
  .setTitle('Diablo BOT')
- .setDescription(message.member.user.username + ' Sunucudan Birini yasaklamak için,**"ÜYELERİ ENGELLE"** Yetkisine,sahip olman gerekiyor.')
+ .setDescription(message.member.user.username + ' Sunucudan Birini yasaklamak için **ÜYELERİ ENGELLE** Yetkisine sahip olman gerekiyor.')
  .setColor('PURPLE')
  
 
