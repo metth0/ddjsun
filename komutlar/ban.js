@@ -5,13 +5,13 @@ exports.run = (client, message, args) => {
      let user = message.mentions.users.first()  
  
   let hata3 = new Discord.RichEmbed()
- .setTitle('Diablo  BOT')
- .setDescription(message.member.user.username + '\n **+ban <kullanıcı>** şeklinde olmalı!')
+ .setTitle('Diablo Bot')
+ .setDescription(message.member.user.username + '\n **-ban <kullanıcı>** şeklinde olmalı!')
  .setColor('PURPLE')
 
 
   let hata4 = new Discord.RichEmbed()
- .setTitle('Diablo BOT')
+ .setTitle('Diablo Bot')
  .setDescription(message.member.user.username + ', yetkilileri yasaklayamassın!')
  .setColor('PURPLE')
 .setFooter('Ne kadar tuhaf dimi?')
@@ -20,8 +20,8 @@ exports.run = (client, message, args) => {
 
 
 let hata2 = new Discord.RichEmbed()
- .setTitle('Diablo BOT')
- .setDescription(message.member.user.username + ' Sunucudan Birini yasaklamak için **ÜYELERİ ENGELLE** Yetkisine sahip olman gerekiyor.')
+ .setTitle('Diablo Bot')
+ .setDescription(message.member.user.username + ' Sunucudan Birini yasaklamak için **"ÜYELERİ ENGELLE"** Yetkisinesahip olman gerekiyor.')
  .setColor('PURPLE')
  
 

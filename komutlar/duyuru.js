@@ -21,9 +21,9 @@ const Discord = require('discord.js');
        .setColor("PURPLE")
        .setThumbnail(client.user.avatarURL)
        .setTimestamp()
-       .setFooter('Diablo Bot ', client.user.avatarURL)
+       .setFooter('Diablo Bot', client.user.avatarURL)
 
-       .addField(`**Diablo Bot | Duyuru**`, `**${question}**`)).then(function(message) {
+       .addField(`**Fynx Store  Bot  | Duyuru**`, `**${question}**`)).then(function(message) {
 
        });
 

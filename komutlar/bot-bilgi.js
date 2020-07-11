@@ -11,7 +11,7 @@ exports.run = async (bot, message, args) => {
   .addField("**Sunucular**", bot.guilds.size.toLocaleString(), true)
   .addField("**Ping**", bot.ping+" ms", true)
   .addField(" Botun Sahibi", "**lrowsxrd#0001**")
-  .addField("**❯   Botumuzu Davet Et**", "[Davet Et](https://discord.com/oauth2/authorize?client_id=730169648452206742&scope=bot&permissions=8)",)
+  .addField("**❯   Botumuzu Davet Et**", "[Davet Et](https://discordapp.com/oauth2/authorize?client_id=731157771956781157&scope=bot&permissions=8)",)
   return message.channel.send(istatistikler);
   };
 
