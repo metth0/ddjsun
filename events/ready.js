@@ -12,7 +12,7 @@ client.user.setPresence({
             name: `Diablo Bot`,
             type: 'LISTENING'   //WATCHING - İZLİYOR LISTINING - DİNLİYOR
         },
-        status: 'idle'   //online - Çevrimiçi idle - Boşta
+        status: 'online'   //online - Çevrimiçi idle - Boşta
 });
 
 }
