@@ -141,12 +141,12 @@ client.on("messageDelete", async message => {
   );
   if (!modlogkanal) return;
   const embed = new Discord.RichEmbed()
-    .setColor("GREEN")
+    .setColor("PURPLE")
     .setTitle("MESAJ SİLİNDİ")
     .setDescription(
       `<@!${message.author.id}> adlı kullanıcı tarafından <#${message.channel.id}> kanalına gönderilen mesaj silindi!\n\nSilinen Mesaj: **${message.content}**`
     )
-    .setFooter("Fynx Store BOT | Log Sistemi");
+    .setFooter("Diablo | Log Sistemi");
   modlogkanal.sendEmbed(embed);
 });
 
@@ -157,13 +157,13 @@ client.on("guildBanAdd", async message => {
   );
   if (!modlogkanal) return;
   const embed = new Discord.RichEmbed()
-    .setColor("GREEN")
+    .setColor("PURPLE")
 
     .setDescription(
       `Üye Sunucudan Yasaklandı! \n<@!${message.user.id}>, ${message.user.tag}`
     )
     .setThumbnail(message.user.avatarURL)
-    .setFooter("Fynx Store BOT | Log Sistemi");
+    .setFooter("Diablo | Log Sistemi");
   modlogkanal.sendEmbed(embed);
 });
 client.on("channelCreate", async channel => {
@@ -174,17 +174,17 @@ client.on("channelCreate", async channel => {
   if (!modlogkanal) return;
   if (channel.type === "text") {
     let embed = new Discord.RichEmbed()
-      .setColor("GREEN")
+      .setColor("PURPLE")
       .setDescription(`${channel.name} adlı metin kanalı oluşturuldu.`)
-      .setFooter(`Fynx Store BOT | Log Sistemi Kanal ID: ${channel.id}`);
+      .setFooter(`Diablo | Log Sistemi Kanal ID: ${channel.id}`);
     modlogkanal.send({ embed });
   }
   if (channel.type === "voice") {
     let embed = new Discord.RichEmbed()
-      .setColor("GREEN")
+      .setColor("PURPLE")
       .setTitle("SES KANALI OLUŞTURULDU")
       .setDescription(`${channel.name} adlı ses kanalı oluşturuldu!`)
-      .setFooter(`Fynx StoreBOT | Log Sistemi Kanal ID: ${channel.id}`);
+      .setFooter(`Diablo | Log Sistemi Kanal ID: ${channel.id}`);
 
     modlogkanal.send({ embed });
   }
@@ -197,17 +197,17 @@ client.on("channelDelete", async channel => {
   if (!modlogkanal) return;
   if (channel.type === "text") {
     let embed = new Discord.RichEmbed()
-      .setColor("GREEN")
+      .setColor("PURPLE")
       .setDescription(`${channel.name} adlı metin kanalı silini!`)
-      .setFooter(`Fynx Store  BOT | Log Sistemi Kanal ID: ${channel.id}`);
+      .setFooter(`Diablo | Log Sistemi Kanal ID: ${channel.id}`);
     modlogkanal.send({ embed });
   }
   if (channel.type === "voice") {
     let embed = new Discord.RichEmbed()
-      .setColor("GREEN")
+      .setColor("PURPLE")
       .setTitle("SES KANALI SİLİNDİ")
       .setDescription(`${channel.name} adlı ses kanalı silindi`)
-      .setFooter(`Fynx Store BOT | Log Sistemi  Kanal ID: ${channel.id}`);
+      .setFooter(`Diablo | Log Sistemi  Kanal ID: ${channel.id}`);
     modlogkanal.send({ embed });
   }
 });
@@ -223,7 +223,7 @@ client.on("messageUpdate", async (oldMsg, newMsg) => {
   );
   if (!kanal) return;
   const embed = new Discord.RichEmbed()
-    .setColor("GREEN")
+    .setColor("PURPLE")
     .addField("Kullanıcı", oldMsg.author.tag, true)
     .addField("Eski Mesaj", `  ${oldMsg.content}  `)
     .addField("Yeni Mesaj", `${newMsg.content}`)

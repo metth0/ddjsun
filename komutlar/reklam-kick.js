@@ -6,7 +6,7 @@ exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission('ADMINISTRATOR'))
         return message.channel.send('**Bu komudu kullanabilmek için `Yönetici` yetkisine sahip olmalısın!**')
   
-    if (!args[0]) return message.channel.send(' **Sistemi kullanabilmek için** -reklamkick aç veya kapat`')
+    if (!args[0]) return message.channel.send(' **Sistemi kullanabilmek için** +reklamkick aç veya kapat`')
 
     if (args[0] == 'aç') {
         db.set(`reklamkick_${message.guild.id}`, 'acik')
