@@ -648,3 +648,30 @@ message.guild.createChannel(`➕│5 Kişilik Oda`, 'voice')
 }
 });
 //----------------------------------Özel oda sistemi Son----------------------------// 
+//----------------------------------GÜVENLİ-DEGİL-------------------------------//
+client.on('guildMemberAdd',async member => {
+  let user = client.users.get(member.id);
+  let chan = client.channels.get(db.fetch(`guvenlik${member.guild.id}`)) 
+       const Canvas = require('canvas')
+       const canvas = Canvas.createCanvas(360,100);
+       const ctx = canvas.getContext('2d');
+  
+  const resim1 = await Canvas.loadImage('https://i.hizliresim.com/gPMMrQ.png')
+    const resim2 = await Canvas.loadImage('https://i.hizliresim.com/9YZZaO.png')
+    const kurulus = new Date().getTime() - user.createdAt.getTime();
+    
+    var kontrol;
+      if (kurulus > 1296000000) kontrol = resim1
+    if (kurulus < 1296000000) kontrol = resim2
+  const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
+  ctx.drawImage(kontrol,0,0,canvas.width, canvas.height)
+  ctx.beginPath();
+    ctx.lineWidth = 4;
+  ctx.fill()
+    ctx.lineWidth = 4;
+  ctx.arc(180, 46, 36, 0, 2 * Math.PI);
+    ctx.clip();
+  ctx.drawImage(avatar, 143,10, 73, 72  );
+   
+chan.send(new Discord.Attachment(canvas.toBuffer(), "fynx.png"))
+});
