@@ -6,7 +6,6 @@ let yardım = new Discord.RichEmbed()
 .setColor('PURPLE')
 .addField('Diablo Moderasyon Menüsü',`
 **:white_small_square: = \`+sayaç\` : Sunucunuza Sayaç Kurar**
-**:white_small_square: = \`+yavaşmod\` : Sohbet Kanalına Sayaç Ekler**
 **:white_small_square: = \`+modlog\` : Sunucunuzun Denetim Kaydını Tutar**
 **:white_small_square: = \`+reklamkick\` : Reklam Yapanları Kickler**
 **:white_small_square: = \`+otorol ayarla\` : Gelen Herkese ROL Verir**
