@@ -4,9 +4,10 @@ let prefix = '-'
 let yardım = new Discord.RichEmbed()  
 .setAuthor(`${client.user.username}`, client.user.avatarURL)
 .setColor('PURPLE')
-.addField('Diablo Bot Yardım',`
-**:white_small_square: = \`+ayarlar\` : Genel Ayar Komutlarını Açar**`)
-(:white_small_square: = \`+moderasyon\` : Moderasyon Komutlarını Açar**`))
+.addField('Diablo Bot ',`
+**-ayarlar** : Genel Ayar Komutlarını Açar.
+**-moderasyon** : Moderasyon Komutları Açar.
+**-yeni-komutlar** : Yeni Komutları Açar.`)
 .setFooter(`${message.author.tag} Tarafından İstendi.`, message.author.avatarURL)
 .setThumbnail(client.user.avatarURL)
  message.channel.send(yardım) 
@@ -14,9 +15,9 @@ let yardım = new Discord.RichEmbed()
 exports.conf = {
   enabled: true,  
   guildOnly: false, 
-  aliases: ["help","y"], 
+  aliases: ["help"], 
   permLevel: 0
 };
 exports.help = {
   name: 'yardım'
-}; 
+};
