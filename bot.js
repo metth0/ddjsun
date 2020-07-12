@@ -270,8 +270,8 @@ client.on("message", async message => {
         db.add(`reklamuyari_${message.author.id}`, 1); //uyarı puanı ekleme
         if (uyarisayisi === null) {
           let uyari = new Discord.RichEmbed()
-            .setColor("GREEN")
-            .setFooter("Fynx Store  BOT", client.user.avatarURL)
+            .setColor("PURPLE")
+            .setFooter("Diablo", client.user.avatarURL)
             .setDescription(
               `<@${message.author.id}> Reklam Kick Sistemine Yakalandın! Reklam Yapmaya Devam Edersen Kickleniceksin (1/3)`
             )
@@ -280,8 +280,8 @@ client.on("message", async message => {
         }
         if (uyarisayisi === 1) {
           let uyari = new Discord.RichEmbed()
-            .setColor("GREEN")
-            .setFooter("Creative BOT ", client.user.avatarURL)
+            .setColor("PURPLE")
+            .setFooter("Diablo Bot", client.user.avatarURL)
             .setDescription(
               `<@${message.author.id}> Reklam Kick Sistemine Yakalandın! Reklam Yapmaya Devam Edersen Kickleniceksin (2/3)`
             )
@@ -294,8 +294,8 @@ client.on("message", async message => {
             reason: `Reklam kick sistemi`
           });
           let uyari = new Discord.RichEmbed()
-            .setColor("GREEN")
-            .setFooter("Fynx Store  BOT", client.user.avatarURL)
+            .setColor("PURPLE")
+            .setFooter("Diablo Bot", client.user.avatarURL)
             .setDescription(
               `<@${message.author.id}> 3 Adet Reklam Uyarısı Aldığı İçin Kicklendi. Bir Kez Daha Yaparsa Banlanacak`
             )
@@ -309,8 +309,8 @@ client.on("message", async message => {
           });
           db.delete(`reklamuyari_${message.author.id}`);
           let uyari = new Discord.RichEmbed()
-            .setColor("GREEN")
-            .setFooter("Fynx Store BOT", client.user.avatarURL)
+            .setColor("PURPLE")
+            .setFooter("Diablo Bot", client.user.avatarURL)
             .setDescription(
               `<@${message.author.id}> Kick Yedikten Sonra Tekrar Devam Ettiği İçin Banlandı.`
             )
@@ -342,8 +342,8 @@ client.on("guildMemberAdd", async (member, guild, message) => {
               otorol +
               ">  **Rolü verildi**"
           )
-          .setColor("GREEN")
-          .setFooter(`Fynx Store Otorol Sistemi`);
+          .setColor("PURPLE")
+          .setFooter(`Diablo Otorol Sistemi`);
         member.guild.channels.get(i).send(embed);
       } else if (role) {
         member.addRole(member.guild.roles.get(otorol));
@@ -351,8 +351,8 @@ client.on("guildMemberAdd", async (member, guild, message) => {
           .setDescription(
             `**Sunucuya Yeni Katılan** \`${member.user.tag}\` **Kullanıcısına** \`${role}\` **Rolü verildi**`
           )
-          .setColor("GREEN")
-          .setFooter(`Fynx Store  Otorol Sistemi`);
+          .setColor("PURPLE")
+          .setFooter(`Diablo Otorol Sistemi`);
         member.guild.channels.get(i).send(embed);
       }
     } catch (e) {
@@ -478,3 +478,173 @@ client.on("guildMemberAdd", member => {
     );
   channel.sendEmbed(embed);
 });
+//---------------------------------KOMUTLAR---------------------------------\\
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // todo create channel
+    if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│2 Kişilik Oda')) {
+        newMember.guild.createChannel(`║👤 ${newMember.displayName}`, {
+            type: 'voice',
+            parent: newMember.voiceChannel.parent
+       }).then(cloneChannel => {
+        newMember.setVoiceChannel(cloneChannel)
+        cloneChannel.setUserLimit(2)
+      })
+    }
+    // ! leave
+    if (oldMember.voiceChannel != undefined) {
+        if (oldMember.voiceChannel.name.startsWith('║👤 ')) {
+            if (oldMember.voiceChannel.members.size == 0) {
+                oldMember.voiceChannel.delete()
+            }
+            else { // change name
+                let matchMember = oldMember.voiceChannel.members.find(x => `║👤 ${x.displayName}` == oldMember.voiceChannel.name);
+                if (matchMember == null) {
+                    oldMember.voiceChannel.setName(`║👤 ${oldMember.voiceChannel.members.random().displayName}`)
+                }
+            }
+        }
+    }
+});
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // todo create channel
+    if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│3 Kişilik Oda')) {
+        newMember.guild.createChannel(`║👤 ${newMember.displayName}`, {
+            type: 'voice',
+            parent: newMember.voiceChannel.parent
+       }).then(cloneChannel => {
+        newMember.setVoiceChannel(cloneChannel)
+        cloneChannel.setUserLimit(3)
+      })
+    }
+    // ! leave
+    if (oldMember.voiceChannel != undefined) {
+        if (oldMember.voiceChannel.name.startsWith('║👤 ')) {
+            if (oldMember.voiceChannel.members.size == 0) {
+                oldMember.voiceChannel.delete()
+            }
+            else { // change name
+                let matchMember = oldMember.voiceChannel.members.find(x => `║👤 ${x.displayName}` == oldMember.voiceChannel.name);
+                if (matchMember == null) {
+                    oldMember.voiceChannel.setName(`║👤 ${oldMember.voiceChannel.members.random().displayName}`)
+                }
+            }
+        }
+    }
+});
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // todo create channel
+    if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│4 Kişilik Oda')) {
+        newMember.guild.createChannel(`║👤 ${newMember.displayName}`, {
+            type: 'voice',
+            parent: newMember.voiceChannel.parent
+       }).then(cloneChannel => {
+        newMember.setVoiceChannel(cloneChannel)
+        cloneChannel.setUserLimit(4)
+      })
+    }
+    // ! leave
+    if (oldMember.voiceChannel != undefined) {
+        if (oldMember.voiceChannel.name.startsWith('║👤 ')) {
+            if (oldMember.voiceChannel.members.size == 0) {
+                oldMember.voiceChannel.delete()
+            }
+            else { // change name
+                let matchMember = oldMember.voiceChannel.members.find(x => `║👤 ${x.displayName}` == oldMember.voiceChannel.name);
+                if (matchMember == null) {
+                    oldMember.voiceChannel.setName(`║👤 ${oldMember.voiceChannel.members.random().displayName}`)
+                }
+            }
+        }
+    }
+});
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // todo create channel
+    if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│5 Kişilik Oda')) {
+        newMember.guild.createChannel(`║👤 ${newMember.displayName}`, {
+            type: 'voice',
+            parent: newMember.voiceChannel.parent
+       }).then(cloneChannel => {
+        newMember.setVoiceChannel(cloneChannel)
+        cloneChannel.setUserLimit(5)
+      })
+    }
+    // ! leave
+    if (oldMember.voiceChannel != undefined) {
+        if (oldMember.voiceChannel.name.startsWith('║👤 ')) {
+            if (oldMember.voiceChannel.members.size == 0) {
+                oldMember.voiceChannel.delete()
+            }
+            else { // change name
+                let matchMember = oldMember.voiceChannel.members.find(x => `║👤 ${x.displayName}` == oldMember.voiceChannel.name);
+                if (matchMember == null) {
+                    oldMember.voiceChannel.setName(`║👤 ${oldMember.voiceChannel.members.random().displayName}`)
+                }
+            }
+        }
+    }
+});
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------Özel oda sistemi----------------------------// 
+client.on('message', async message => {
+  const ms = require('ms');
+  const prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`) || ayarlar.prefix
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+  let u = message.mentions.users.first() || message.author;
+  if (command === "özelodasistemi") {
+  if (message.guild.channels.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
+  if (!message.member.hasPermission('ADMINISTRATOR'))
+  return message.channel.send(" Bu Kodu `Yönetici` Yetkisi Olan Kişi Kullanabilir.");
+    message.channel.send(`Özel Oda Sisteminin Kurulmasını İstiyorsanız **Kur** Yazınız.`)
+      message.channel.awaitMessages(response => response.content === 'Kur', {
+        max: 1,
+        time: 10000,
+        errors: ['time'],
+     })
+    .then((collected) => {
+
+message.guild.createChannel('【🔐】2 Kişilik Odalar【🔐】', 'category', [{
+  id: message.guild.id,
+}]);
+
+message.guild.createChannel(`➕│2 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】2 Kişilik Odalar【🔐】")))
+
+message.guild.createChannel('【🔐】3 Kişilik Odalar【🔐】', 'category', [{
+  id: message.guild.id,
+}]);
+
+message.guild.createChannel(`➕│3 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】3 Kişilik Odalar【🔐】")))
+
+message.guild.createChannel('【🔐】4 Kişilik Odalar【🔐】', 'category', [{
+  id: message.guild.id,
+}]);
+
+message.guild.createChannel(`➕│4 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】4 Kişilik Odalar【🔐】")))
+
+message.guild.createChannel('【🔐】5 Kişilik Odalar【🔐】', 'category', [{
+  id: message.guild.id,
+}]);
+message.guild.createChannel(`➕│5 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】5 Kişilik Odalar【🔐】")))
+
+       message.channel.send("Gelişmiş Özel Oda Sistemi Aktif! ")
+     
+            })   
+      
+}
+});
+//----------------------------------Özel oda sistemi Son----------------------------// 
