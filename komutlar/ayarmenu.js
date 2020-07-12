@@ -11,7 +11,8 @@ let yardım = new Discord.RichEmbed()
 **:white_small_square: = \`+kick\` : İstediğiniz Kişiyi Kicklersiniz!**
 **:white_small_square: = \`+ototag\` : Oto Tag Ayarlar!**
 **:white_small_square: = \`+sil 1-100\` : Belirtilen Kadar Mesaj Siler! **
-**:white_small_square: = \`+özelodasistemi\` : 2-3-4 ve 5 Kişilik Özel Odalar Kurar! **`)
+**:white_small_square: = \`+özelodasistemi\` : 2-3-4 ve 5 Kişilik Özel Odalar Kurar! **
+**:white_small_square: = \`+sunucukur\` : Sunucunuza teker teker ne gerekiyorsa kurar! **`)
 .setFooter(`${message.author.tag} Tarafından İstendi.`, message.author.avatarURL)
 .setThumbnail(client.user.avatarURL)
  message.channel.send(yardım) 

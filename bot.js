@@ -675,3 +675,4 @@ client.on('guildMemberAdd',async member => {
    
 chan.send(new Discord.Attachment(canvas.toBuffer(), "fynx.png"))
 });
+//--------------------------------------------------------------------------------//
