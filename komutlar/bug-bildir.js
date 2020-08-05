@@ -5,7 +5,7 @@ let user = message.author.username;
 let guild = message.guild.name;
 let guildid = message.guild.id;
 let kanal = message.channel.name;
-let channel = bot.channels.get("698952113165828096")//bug repot kanal id
+let channel = bot.channels.get("740552749070024746")//bug repot kanal id
 let embed = new Discord.RichEmbed()
 .setTitle("Diablo Bug Bildir Sistemi")
 .setThumbnail("https://cdn.discordapp.com/avatars/672496694088433704/41a129cb742cb397f09a32bda88d138d.png?size=2048")
